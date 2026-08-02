@@ -40,7 +40,7 @@ function playRound (humanChoice, computerChoice) {
 
 function playGame(number_of_rounds = 5){
     for (let i = 0; i < number_of_rounds; i++) {
-        playRound(getHumanChoice(),getComputerChoice())
+        alert(playRound(getHumanChoice(),getComputerChoice()))
     }
     if (humanScore > computerScore) {
         message = `You scored ${humanScore} vs computer ${computerScore}. You win the game!`
@@ -50,6 +50,7 @@ function playGame(number_of_rounds = 5){
         message = `You scored ${humanScore} but computer scored ${computerScore}. You lose the game.`
     }
     console.log (message)
+    alert(message)
 }
 
 playGame()

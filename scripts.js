@@ -21,7 +21,7 @@ function getHumanChoice(){
 function playRound (humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase()
     computerChoice = computerChoice.toLowerCase()
-    if (humanChoice == computerChoice) {
+    if (humanChoice === computerChoice) {
         message = `Human: ${humanChoice}, computer: ${computerChoice}: Draw !`
     } else if ((humanChoice==="rock" && computerChoice === "scissors") ||
                 (humanChoice==="scissors" && computerChoice === "paper") ||
@@ -41,6 +41,7 @@ function playRound (humanChoice, computerChoice) {
 function playGame(number_of_rounds = 5){
     for (let i = 0; i < number_of_rounds; i++) {
         alert(playRound(getHumanChoice(),getComputerChoice()))
+        alert("hello")
     }
     if (humanScore > computerScore) {
         message = `You scored ${humanScore} vs computer ${computerScore}. You win the game!`
